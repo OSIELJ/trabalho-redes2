@@ -34,3 +34,6 @@ No terminal:
 ```bash
 cd exercicio1_tcp
 python3 servidor/servidor.py
+
+##depois inicie o arquivo
+python3 cliente/cliente.py
