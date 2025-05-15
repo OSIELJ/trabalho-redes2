@@ -1,4 +1,4 @@
-# cliente.py
+# servidor.py
 # Participantes: Osiel Junior, Fernando Maia, Raul Rodrigues.
 
 import socket
