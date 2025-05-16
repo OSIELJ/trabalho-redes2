@@ -32,6 +32,10 @@ Implementar um sistema de chat em tempo real que permita a comunicação bidirec
 ### 1. Iniciar o servidor
 No terminal:
 ```bash
-cd servidor
+cd exercicio3_chat_tcp/servidor
 python3 servidor.py
+
+##depois inicie o arquivo
+cd exercicio3_chat_tcp/cliente
+python3 cliente.py
 
