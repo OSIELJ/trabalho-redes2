@@ -32,8 +32,9 @@ Desenvolver um cliente e um servidor que se comuniquem usando o protocolo UDP, c
 ### 1. Iniciar o servidor
 No terminal:
 ```bash
-cd exercicio2_udp_echo
-python3 servidor/servidor.py
+cd exercicio2_udp_echo/servidor
+python3 servidor.py
 
 ##depois inicie o arquivo
-python3 cliente/cliente.py
+cd exercicio2_udp_echo/cliente
+python3 cliente.py
