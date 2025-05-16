@@ -1,46 +1,38 @@
-
-# Exercício – Servidor de Hora com Múltiplos Clientes (TCP)
+# Exercício 4 – Servidor de Hora com Threads (TCP)
 
 **Disciplina:** Redes de Computadores 2  
 **Professor:** Alessandro Vivas Andrade  
 **Participantes:** Osiel Junior, Fernando Maia, Raul Rodrigues
 
-##  Objetivo
-Implementar um servidor multithread que forneça a hora atual para múltiplos clientes simultaneamente via protocolo TCP.
+## Objetivo
+Criar um servidor multithread que forneça a hora atual para múltiplos clientes simultaneamente via protocolo TCP.
 
----
-
-##  Funcionalidades Implementadas
+## Funcionalidades Implementadas
 
 ### Servidor
-- Roda na porta `7000` (`localhost:7000`)
-- Utiliza **threads** para atender múltiplos clientes em paralelo
-- Envia a hora atual no formato `"HH:MM:SS"` para cada cliente ao se conectar
-- Registra logs em arquivo (`servidor.log`) para cada conexão recebida e encerrada
-- Lida com falhas de clientes sem derrubar o servidor
+- Escuta na porta 7000 (`localhost:7000`)
+- Utiliza `threading` para lidar com múltiplos clientes simultaneamente
+- Envia a hora atual no formato `"HH:MM:SS"` ao cliente
+- Registra todas as conexões e mensagens em um arquivo de log (`servidor.log`)
+- Continua funcionando mesmo que algum cliente cause erro
 
-###  Cliente
-- Conecta-se ao servidor via TCP
-- Solicita e exibe a hora recebida uma única vez no console
+### Cliente
+- Conecta ao servidor TCP na porta 7000
+- Recebe e exibe a hora enviada pelo servidor
+- Encerra a conexão após receber a hora
 
----
-
-##  Requisitos
+## Requisitos
 - Python 3.10 ou superior
-- Sistema Operacional: Linux ou Windows (testado no Ubuntu)
-- Editor recomendado: Visual Studio Code
+- Sistema Operacional: Linux (testado no Ubuntu)
 
----
-
-##  Como Executar
+## Como Executar
 
 ### 1. Iniciar o servidor
+No terminal:
 ```bash
-cd servidor
+cd exercicio4_hora_tcp/servidor
 python3 servidor.py
 
-##  Como iniciar um ou mais clientes
-cd cliente
+##depois inicie o arquivo
+cd exercicio4_hora_tcp/cliente
 python3 cliente.py
-
-
