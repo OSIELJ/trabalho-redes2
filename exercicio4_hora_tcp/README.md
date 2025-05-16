@@ -7,19 +7,27 @@
 ## Objetivo
 Criar um servidor multithread que forneça a hora atual para múltiplos clientes simultaneamente via protocolo TCP.
 
-## Funcionalidades Implementadas
+##  Funcionalidades Implementadas
 
-### Servidor
-- Escuta na porta 7000 (`localhost:7000`)
-- Utiliza `threading` para lidar com múltiplos clientes simultaneamente
-- Envia a hora atual no formato `"HH:MM:SS"` ao cliente
-- Registra todas as conexões e mensagens em um arquivo de log (`servidor.log`)
-- Continua funcionando mesmo que algum cliente cause erro
+###  Servidor
+- Roda na porta `7000` (`localhost:7000`)
+- Aceita múltiplos clientes simultaneamente usando threads
+- Mantém a conexão ativa com o cliente enquanto ele envia comandos
+- Responde aos seguintes comandos:
+  - `hora` → envia a hora atual no formato `"HH:MM:SS"`
+  - `sair` → encerra a conexão com o cliente
+- Retorna uma mensagem de erro para comandos inválidos
+- Gera logs detalhados no arquivo `servidor.log` com:
+  - Conexões iniciadas
+  - Comandos recebidos
+  - Conexões encerradas
 
 ### Cliente
-- Conecta ao servidor TCP na porta 7000
-- Recebe e exibe a hora enviada pelo servidor
-- Encerra a conexão após receber a hora
+- Conecta-se ao servidor e mantém a conexão ativa
+- Permite que o usuário envie comandos via teclado:
+  - `hora` → recebe e exibe a hora atual
+  - `sair` → encerra a conexão
+- Exibe as respostas do servidor em tempo real
 
 ## Requisitos
 - Python 3.10 ou superior

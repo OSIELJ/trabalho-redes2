@@ -16,3 +16,18 @@
 14:18:22 [INFO] Nova conex√£o de ('127.0.0.1', 32884)
 14:18:22 [INFO] Hora enviada para ('127.0.0.1', 32884): 14:18:22
 14:18:22 [INFO] Conex√£o encerrada com ('127.0.0.1', 32884)
+16:32:24 [INFO] Servidor iniciado em localhost:7000
+16:32:45 [INFO] Nova conex„o de ('127.0.0.1', 53148)
+16:32:51 [INFO] Comando recebido de ('127.0.0.1', 53148): hora
+16:35:07 [INFO] Nova conex„o de ('127.0.0.1', 53181)
+16:35:14 [INFO] Comando recebido de ('127.0.0.1', 53148): hora
+16:35:21 [INFO] Comando recebido de ('127.0.0.1', 53181): hora
+16:35:55 [INFO] Nova conex„o de ('127.0.0.1', 53188)
+16:35:58 [INFO] Comando recebido de ('127.0.0.1', 53188): hora
+16:37:35 [INFO] Comando recebido de ('127.0.0.1', 53181): sair
+16:37:35 [INFO] Conex„o encerrada com ('127.0.0.1', 53181)
+16:38:33 [INFO] Comando recebido de ('127.0.0.1', 53188): hora
+16:38:59 [INFO] Comando recebido de ('127.0.0.1', 53188): sair
+16:38:59 [INFO] Conex„o encerrada com ('127.0.0.1', 53188)
+16:39:10 [INFO] Comando recebido de ('127.0.0.1', 53148): sair
+16:39:10 [INFO] Conex„o encerrada com ('127.0.0.1', 53148)

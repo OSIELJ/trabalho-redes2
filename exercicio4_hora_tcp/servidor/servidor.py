@@ -28,17 +28,28 @@ def handle_client(conn, addr):
     print(f"[+] Cliente conectado: {addr}")
 
     try:
-        # Enviar hora atual
-        now = datetime.now().strftime("%H:%M:%S")
-        conn.sendall(now.encode())
+        while True:
+            data = conn.recv(1024).decode().strip()
+            if not data:
+                break
 
-        logging.info(f"Hora enviada para {addr}: {now}")
+            logging.info(f"Comando recebido de {addr}: {data}")
+
+            if data.lower() == "hora":
+                now = datetime.now().strftime("%H:%M:%S")
+                conn.sendall(f"Hora atual: {now}\n".encode())
+            elif data.lower() == "sair":
+                conn.sendall("Encerrando conexão...\n".encode())
+                break
+            else:
+                conn.sendall("Comando inválido. Use 'hora' ou 'sair'.\n".encode())
+
     except Exception as e:
         logging.error(f"Erro com {addr}: {e}")
     finally:
         conn.close()
-        logging.info(f"Conexão encerrada com {addr}")
         print(f"[-] Cliente desconectado: {addr}")
+        logging.info(f"Conexão encerrada com {addr}")
 
 
 # Cria o socket do servidor
