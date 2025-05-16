@@ -32,8 +32,9 @@ Implementar um cliente e um servidor que se comuniquem via protocolo TCP, permit
 ### 1. Iniciar o servidor
 No terminal:
 ```bash
-cd exercicio1_tcp
-python3 servidor/servidor.py
+cd exercicio1_tcp/servidor
+python3 servidor.py
 
 ##depois inicie o arquivo
-python3 cliente/cliente.py
+cd exercicio1_tcp/cliente
+python3 cliente.py
