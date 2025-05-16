@@ -4,3 +4,4 @@
 ##  Objetivo
 trabalhar conceitos importantes em redes de computadores através de exercícios práticos. 
 Os exercícios estão separados em diretórios com arquivos readme para leitura e execução de cada exercício feito
+https://github.com/OSIELJ/trabalho-redes2

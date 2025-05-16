@@ -2,10 +2,17 @@ import socket
 import logging
 import threading
 from datetime import datetime
+import os
+
+# Caminho absoluto da pasta onde o script atual está
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Caminho relativo ao script
+log_path = os.path.join(base_dir, 'servidor.log')
 
 # Configuração do log
 logging.basicConfig(
-    filename='servidor.log',
+    filename=log_path,
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
     datefmt='%H:%M:%S'
